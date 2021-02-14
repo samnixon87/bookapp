@@ -19,9 +19,9 @@ class ListBooks extends Component {
                 </div>
                 <div className="list-books-content">
                     <div>
-                        <Bookshelf title="Currently Reading" onChangeShelf={onChangeShelf} books={books.filter(books => books.shelf === 'currentlyReading')}/>
-                        <Bookshelf title="Want To Read" onChangeShelf={onChangeShelf} books={books.filter(books => books.shelf === 'wantToRead')}/>
-                        <Bookshelf title="Read" onChangeShelf={onChangeShelf} books={books.filter(books => books.shelf === 'read')}/>
+                        <Bookshelf title="Currently Reading" onChangeShelf={onChangeShelf} books={books.filter(i => i.shelf === 'currentlyReading')}/>
+                        <Bookshelf title="Want To Read" onChangeShelf={onChangeShelf} books={books.filter(i => i.shelf === 'wantToRead')}/>
+                        <Bookshelf title="Read" onChangeShelf={onChangeShelf} books={books.filter(i => i.shelf === 'read')}/>
                     </div>
                 </div>
                 <div className="open-search">
