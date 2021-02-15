@@ -48,12 +48,7 @@ class Search extends Component {
     const { query, books } = this.state;
     let bookSearchResult
 
-    if (query) {
-        const match = new RegExp(escapeRegExp(query), 'i')
-        bookSearchResult = books.filter(book => match.test(book.title))
-    } else {
-        bookSearchResult = books
-    }
+    bookSearchResult = books
     bookSearchResult.sort(sortBy('title'))
 
     return (
